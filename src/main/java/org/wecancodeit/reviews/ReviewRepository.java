@@ -1,4 +1,4 @@
-package org.wecancodeit.moviereviews;
+package org.wecancodeit.reviews;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -9,20 +9,20 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public class MovieReviewRepository {
+public class ReviewRepository {
 	private Map<Long, Review> reviewList = new HashMap<Long, Review>();
 	
-	public MovieReviewRepository() {
-		Review hellraiser = new Review(1L, "Hellraiser");
-		Review ladybird = new Review(2L, "Ladybird");
-		Review jurassicWorld = new Review(3L, "Jurassic World");
+	public ReviewRepository() {
+		Review hellraiser = new Review(1L, "Hellraiser", "test content","jurassicworld.jpg","horror");
+		Review ladybird = new Review(2L, "The Last Jedi","we are testing content","lastjedi.png","drama");
+		Review jurassicWorld = new Review(3L, "Jurassic World","testing content...","jurassicworld.jpg","action");
 		
 		reviewList.put(hellraiser.getId(),hellraiser);
 		reviewList.put(ladybird.getId(),ladybird);
 		reviewList.put(jurassicWorld.getId(),jurassicWorld);
 	}
 	
-	public MovieReviewRepository(Review...reviews) {
+	public ReviewRepository(Review...reviews) {
 		for(Review review:reviews) {
 			reviewList.put(review.getId(), review);
 		}

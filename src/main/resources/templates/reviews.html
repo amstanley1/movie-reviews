@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org">
 <head>
-	<title>Movie Reviews</title>
+	<title>Film Reviews</title>
+	<link th:href="@{https://fonts.googleapis.com/css?family=Roboto:400,700}"
+          rel='stylesheet' type='text/css' />
+	<link href="../static/css/reviewsLayout.css" th:href="@{/css/reviewsLayout.css}" rel="stylesheet" />
+
 </head>
 <body>
-	<h1>Reviews</h1>
+	<h1>Film Reviews</h1>
+	 <hr />
+	<div class="review" th:each="review: ${reviews}">
+		<ul>
+			<li>
+				<!--<img th:src="@{${'/images/' + review.imageUrl + '.jpg'}}"/> -->
+				<img th:src="@{${'/images/' + review.imageUrl}}"/>
+				<!--<img th:src="@{${review.imageUrl}}"/> -->
+				<a th:href="@{/review(id=${review.Id})}" th:text="${review.title}"></a>
+				<p th:text="${'Category: ' + review.category}"></p>
+			</li>
+		</ul>
+	</div>
 </body>
 </html>

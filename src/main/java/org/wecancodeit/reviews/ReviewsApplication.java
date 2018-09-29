@@ -1,12 +1,12 @@
-package org.wecancodeit.moviereviews;
+package org.wecancodeit.reviews;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MovieReviewsApplication {
+public class ReviewsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieReviewsApplication.class, args);
+		SpringApplication.run(ReviewsApplication.class, args);
 	}
 }

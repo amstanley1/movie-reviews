@@ -1,4 +1,4 @@
-package org.wecancodeit.moviereviews;
+package org.wecancodeit.reviews;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.containsInAnyOrder;
@@ -7,28 +7,30 @@ import static org.junit.Assert.assertThat;
 import java.util.Collection;
 
 import org.junit.Test;
+import org.wecancodeit.reviews.ReviewRepository;
+import org.wecancodeit.reviews.Review;
 
 
 
-public class MoveReviewsRepositoryTest {
+public class ReviewsRepositoryTest {
 	
-	MovieReviewRepository underTest;
+	ReviewRepository underTest;
 	private long firstReviewId = 1L;
-	private Review firstReview = new Review(firstReviewId, "");
+	private Review firstReview = new Review(firstReviewId, "","","","");
 	private long secondReviewId = 2L;
-	private Review secondReview = new Review(secondReviewId, "");
+	private Review secondReview = new Review(secondReviewId, "","","","");
 	
 	
 	@Test
 	public void shouldFindAReview() {
-		underTest = new MovieReviewRepository(firstReview);
+		underTest = new ReviewRepository(firstReview);
 		Review result = underTest.findOne(firstReviewId);
 		assertThat(result, is(firstReview));
 	}
 	
 	@Test
 	public void shouldFindAllReviews() {
-		underTest = new MovieReviewRepository(firstReview, secondReview);
+		underTest = new ReviewRepository(firstReview, secondReview);
 		Collection<Review> result = underTest.findAll();
 		assertThat(result, containsInAnyOrder(firstReview, secondReview));
 	}

@@ -1,4 +1,4 @@
-package org.wecancodeit.moviereviews;
+package org.wecancodeit.reviews;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
@@ -19,11 +19,14 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.wecancodeit.reviews.ReviewController;
+import org.wecancodeit.reviews.ReviewRepository;
+import org.wecancodeit.reviews.Review;
 
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(MovieReviewController.class) //mock up controller
-public class MovieReviewControllerMockMvcTest {
+@WebMvcTest(ReviewController.class) //mock up controller
+public class ReviewControllerMockMvcTest {
 		
 		@Resource
 		private MockMvc mvc;
@@ -35,7 +38,7 @@ public class MovieReviewControllerMockMvcTest {
 		private Review secondReview;
 		
 		@MockBean
-		private MovieReviewRepository repository;
+		private ReviewRepository repository;
 		
 		@Test
 		public void shouldBeOkForAllCourses() throws Exception {
