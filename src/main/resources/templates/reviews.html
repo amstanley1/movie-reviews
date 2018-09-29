@@ -10,16 +10,21 @@
 <body>
 	<h1>Film Reviews</h1>
 	 <hr />
+	
+	<div class="flex-container">
 	<div class="review" th:each="review: ${reviews}">
 		<ul>
+		 <a th:href="@{/review(id=${review.Id})}">
 			<li>
 				<!--<img th:src="@{${'/images/' + review.imageUrl + '.jpg'}}"/> -->
 				<img th:src="@{${'/images/' + review.imageUrl}}"/>
 				<!--<img th:src="@{${review.imageUrl}}"/> -->
-				<a th:href="@{/review(id=${review.Id})}" th:text="${review.title}"></a>
+				<h4 th:text="${review.title}"></h4>
 				<p th:text="${'Category: ' + review.category}"></p>
 			</li>
+			</a>
 		</ul>
+	</div>
 	</div>
 </body>
 </html>
