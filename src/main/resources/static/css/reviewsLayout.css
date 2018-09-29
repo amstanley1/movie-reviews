@@ -1,0 +1,47 @@
+body{
+	position: relative;
+	top: 20px;
+	background-color: black;
+	font-family: roboto, helvetica, "sans-serif";
+}
+
+h1 {
+	font-size: 3em;
+	color: blue;
+	text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.review {
+	width: 30%;
+	margin: 10px auto;
+	
+}
+
+a {
+	display: block;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+p {
+	color: white;
+}

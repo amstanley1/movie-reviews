@@ -1,4 +1,4 @@
-package org.wecancodeit.moviereviews;
+package org.wecancodeit.reviews;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Mockito.when;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class MovieReviewController {
+public class ReviewController {
 	
 	@Resource
-	MovieReviewRepository reviewRepo;
+	ReviewRepository reviewRepo;
 	
 	@RequestMapping("/show-reviews")
 	public String findAllReviews(Model model) {
