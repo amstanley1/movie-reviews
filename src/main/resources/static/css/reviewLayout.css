@@ -45,6 +45,10 @@ p {
 	text-align: center;
 }
 
+.tags {
+	text-align: center;
+}
+
 a:hover {
 	color: grey;
 }
