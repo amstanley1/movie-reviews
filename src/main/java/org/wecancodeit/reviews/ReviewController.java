@@ -1,13 +1,6 @@
 package org.wecancodeit.reviews;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-
 import javax.annotation.Resource;
-
-import org.junit.Test;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +23,4 @@ public class ReviewController {
 		model.addAttribute("review", reviewRepo.findOne(id));
 		return "review";	
 	}
-	
-	
-	
 }

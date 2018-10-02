@@ -14,8 +14,6 @@
 		<h1 th:text="${review.title}"></h1>
 		<p class="category" th:text="${'Category: ' + review.category}"></p>
 		<p class="tags">Tags: <span   th:each = "tag, stat : ${review.tags}"  th:text="!${stat.last} ? ${tag} + ',': ${tag}"></span></p>
-		 <!-- th:text="${iterStat.last}? ${tag} : {${tag} + ','}"
-		th:text="${tag}" -->
 		<hr />
 		<img th:src="@{${'/images/' + review.imageUrl}}" />
 		<p th:text="${review.content}"></p>
