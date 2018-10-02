@@ -14,17 +14,15 @@
 		<div class="grid-container">
 		<div class="review" th:each="review: ${reviews}">
 			<ul>
-				
-					<li>
+				<li>
 					<a th:href="@{/review(id=${review.Id})}">
 						<div class="img-container">
 							<img th:src="@{${'/images/' + review.imageUrl}}" />
 						</div> <!--<img th:src="@{${review.imageUrl}}"/> -->
 						<h4 class = "title" th:text="${review.title}"></h4>
-						</a>
-						<p class="category" th:text="${'Category: ' + review.category}"></p>
+					</a>
+					<p class="category" th:text="${'Category: ' + review.category}"></p>
 				</li>
-				
 			</ul>
 		</div>
 	</div>

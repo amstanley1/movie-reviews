@@ -4,6 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertThat;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.junit.Test;
@@ -16,9 +17,9 @@ public class ReviewsRepositoryTest {
 	
 	ReviewRepository underTest;
 	private long firstReviewId = 1L;
-	private Review firstReview = new Review(firstReviewId, "","","","");
+	private Review firstReview = new Review(firstReviewId, "","","","", new ArrayList<String>());
 	private long secondReviewId = 2L;
-	private Review secondReview = new Review(secondReviewId, "","","","");
+	private Review secondReview = new Review(secondReviewId, "","","","", new ArrayList<String>());
 	
 	
 	@Test
