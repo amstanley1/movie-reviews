@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
-<head>
-	<title th:text = "${review.title}"></title>
-	<link th:href="@{https://fonts.googleapis.com/css?family=Roboto:400,700}"
-          rel='stylesheet' type='text/css' />
-	<link href="../static/css/reviewLayout.css" th:href="@{/css/reviewLayout.css}" rel="stylesheet" />
-</head>
-<body>
-	<h1 th:text = "${review.title}"></h1>
-	<p class="category" th:text="${'Category: ' + review.category}"></p>
-	<hr />
-	<img th:src="@{${'/images/' + review.imageUrl}}"/>
-	
-	<p th:text = "${review.content}"></p>
-	<a  href="http://localhost:8080/show-reviews">Back to home</a>
-			
-</body>
+
+	<head>
+		<title th:text="${review.title}"></title>
+			<link
+				th:href="@{https://fonts.googleapis.com/css?family=Roboto:400,700}"
+				rel='stylesheet' type='text/css' />
+			<link href="../static/css/reviewLayout.css"
+				th:href="@{/css/reviewLayout.css}" rel="stylesheet" />
+	</head>
+
+	<body>
+		<h1 th:text="${review.title}"></h1>
+		<p class="category" th:text="${'Category: ' + review.category}"></p>
+		<hr />
+		<img th:src="@{${'/images/' + review.imageUrl}}" />
+		<p th:text="${review.content}"></p>
+		<a href="http://localhost:8080/show-reviews">Back to home</a>
+	</body>
 </html>
